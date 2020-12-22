@@ -18,7 +18,7 @@ void check() {
 
 int click() {
 	POINT* pos = new POINT();
-	if (!GetCursorPos(pos)) return 1;
+	if (!GetCursorPos(pos)) { delete pos; return 1; }
 
 	x = pos->x;
 	y = pos->y;
