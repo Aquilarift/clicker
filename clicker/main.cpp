@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 bool oofs, clState = true;
 int slep, x, y;
 
