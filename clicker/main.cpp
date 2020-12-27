@@ -11,6 +11,7 @@ void check() {
 	while (true) {
 		if (GetAsyncKeyState(VK_DIVIDE)) exit(0);
 		if (GetAsyncKeyState(VK_MULTIPLY) & 0x0001) clState = !clState;
+		Sleep(100);
 	}
 }
 
@@ -28,7 +29,8 @@ int click() {
 			mouse_event(MOUSEEVENTF_LEFTUP, x, y, 0, 0);
 
 			Sleep(slep);
-		}
+		} else 
+			this_thread::sleep_for(chrono::milliseconds(100));
 	}
 
 	return 0;
